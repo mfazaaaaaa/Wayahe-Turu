@@ -155,8 +155,8 @@ MonoBehaviour:
   - {fileID: 7629842153674996485, guid: 2fc72766028ee904388b105b7a620677, type: 3}
   - {fileID: 7365683801012099794, guid: db7cc3f2c4f1fd64cacca98f9ed74c1c, type: 3}
   - {fileID: 8132696164528879624, guid: 947116c728a1f1a4d9fe3be86ca07eba, type: 3}
-  spawnMin: {x: -10, y: 0, z: -10}
-  spawnMax: {x: 10, y: 0, z: 10}
+  spawnMin: {x: -7, y: -3, z: 0}
+  spawnMax: {x: 7, y: 3, z: 0}
   minSpawnInterval: 2
   maxSpawnInterval: 10
 --- !u!4 &195884372

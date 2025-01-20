@@ -6,8 +6,8 @@ public class RandomSpawn: MonoBehaviour
     public GameObject[] prefabs;
 
     // Range for random spawn positions (you can adjust these values as needed)
-    public Vector3 spawnMin = new Vector3(-10, 0, -10);
-    public Vector3 spawnMax = new Vector3(10, 0, 10);
+    public Vector3 spawnMin = new Vector3(-7, -3, 0);
+    public Vector3 spawnMax = new Vector3(7, 3,0);
 
     // Minimum and maximum spawn intervals for randomizing spawn times for each prefab
     public float minSpawnInterval = 1f;
@@ -24,7 +24,7 @@ public class RandomSpawn: MonoBehaviour
         // Assign a random spawn interval for each prefab
         for (int i = 0; i < prefabs.Length; i++)
         {
-            spawnIntervals[i] = Random.Range(minSpawnInterval, maxSpawnInterval);
+            spawnIntervals[i] = Random.Range(minSpawnInterval,minSpawnInterval);
             // Start the spawning process for each prefab with its custom interval
             StartCoroutine(SpawnPrefabWithInterval(i, spawnIntervals[i]));
         }

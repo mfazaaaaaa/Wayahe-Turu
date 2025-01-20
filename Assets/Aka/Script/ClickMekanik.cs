@@ -14,7 +14,7 @@ public class ClickMekanik: MonoBehaviour
         if (currentClickCount >= clickThreshold)
         {
             // Menghilangkan objek setelah mencapai jumlah klik yang diinginkan
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
