@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 51428b18be2384b4ab972211c0d46bae, type: 2}
   bottomBar: {fileID: 1549959142}
+  backgroundController: {fileID: 1404678802}
 --- !u!1 &689757262
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +410,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404678800}
+  - component: {fileID: 1404678801}
+  - component: {fileID: 1404678802}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -433,6 +436,43 @@ Transform:
   - {fileID: 1535340345}
   m_Father: {fileID: 166713893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1404678801
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404678799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f7efce2d5729924aadc7479e517340d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1404678802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404678799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2154e1f8688faea48ab43d8b9f14c483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSwitched: 0
+  background1: {fileID: 1960993780}
+  background2: {fileID: 1535340346}
+  animator: {fileID: 1404678801}
 --- !u!1 &1484924941
 GameObject:
   m_ObjectHideFlags: 0

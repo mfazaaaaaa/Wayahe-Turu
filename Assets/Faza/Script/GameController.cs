@@ -6,9 +6,11 @@ public class GameController : MonoBehaviour
 {
     public StoryScene currentScene;
     public BottomBarController bottomBar;
+    public BackgroundController backgroundController;
     void Start()
     {
         bottomBar.PlayScene(currentScene);
+        backgroundController.SetImage(currentScene.Background);
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class GameController : MonoBehaviour
                 {
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
+                    backgroundController.SwitchImage(currentScene.Background);
                 }
                 bottomBar.PlayNextSentence();
             }
