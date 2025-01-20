@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   sentences:
-  - text: 3
+  - text: tes3
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  Background: {fileID: 0}
+  Background: {fileID: 21300000, guid: e4cf9e3e3e774f7499101a2b61318268, type: 3}
   nextScene: {fileID: 0}

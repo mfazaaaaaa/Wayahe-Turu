@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         bottomBar.PlayScene(currentScene);
-        backgroundController.SetImage(currentScene.Background);
+        backgroundController.SetImage(currentScene.background);
     }
 
     void Update()
@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
                 {
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
-                    backgroundController.SwitchImage(currentScene.Background);
+                    backgroundController.SwitchImage(currentScene.background);
                 }
                 bottomBar.PlayNextSentence();
             }

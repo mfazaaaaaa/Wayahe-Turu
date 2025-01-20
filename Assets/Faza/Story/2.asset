@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   sentences:
-  - text: 22
+  - text: helo2
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
   Background: {fileID: 21300000, guid: d12e09c69856efb4cb50e1dea54860b7, type: 3}
   nextScene: {fileID: 11400000, guid: 4bc0d9b4fc502aa459b29e0ac20fdbfa, type: 2}

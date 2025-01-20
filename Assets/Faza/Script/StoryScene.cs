@@ -7,7 +7,7 @@ using UnityEngine;
 public class StoryScene : ScriptableObject
 {
     public List<Sentence> sentences;
-    public Sprite Background;
+    public Sprite background;
     public StoryScene nextScene;
 
     [System.Serializable]
