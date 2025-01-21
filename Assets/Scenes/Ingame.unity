@@ -860,7 +860,7 @@ MonoBehaviour:
   - {fileID: 3243523323097768670, guid: 2087521cad912db4893ba57da51b6775, type: 3}
   spawnMin: {x: -7, y: -3, z: 0}
   spawnMax: {x: 7, y: 3, z: 0}
-  waveDuration: 3
+  waveDuration: 20
   maxGhostCount: 10
   spawnInterval: 2
   timerText: {fileID: 939400925}
