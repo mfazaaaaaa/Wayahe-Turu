@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   sentences:
-  - text: hi
+  - text: Maya was an office worker living in a big city. At 27 years old, she had
+      a strong work ethic and was known in the office as an exemplary employee who
+      always completed her tasks on time.
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  - text: hello
+  - text: However, her ambitious nature often made her neglect proper rest. That
+      day, Maya worked harder than usual. A major project that could determine her
+      future in the company kept her focused until late at night.
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  - text: tes
-    speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  Background: {fileID: 21300000, guid: a257b1beeadddb143bc78da43bda9107, type: 3}
+  background: {fileID: 21300000, guid: a257b1beeadddb143bc78da43bda9107, type: 3}
   nextScene: {fileID: 11400000, guid: 0a513730e00f4e44489a1e3c12056a02, type: 2}

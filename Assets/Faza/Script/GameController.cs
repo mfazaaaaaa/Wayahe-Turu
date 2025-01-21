@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
             {
                 if (bottomBar.IsLastSentence())
                 {
+                    if (currentScene.nextScene == null) return;
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
                     backgroundController.SwitchImage(currentScene.background);

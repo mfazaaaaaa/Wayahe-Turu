@@ -26,9 +26,11 @@ public class BottomBarController : MonoBehaviour
 
     public void PlayNextSentence()
     {
+        if (state != State.COMPLETED) return;
         StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
         personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+        if (sentenceIndex >= currentScene.sentences.Count) return;
     }
 
     public bool IsCompleted()
@@ -56,6 +58,13 @@ public class BottomBarController : MonoBehaviour
                 state = State.COMPLETED ; 
                 break;
             }
+        }
+
+        if (state == State.PLAYING)
+        {
+            barText.text = text;
+            state = State.COMPLETED;
+            yield break;
         }
     }
 }
