@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c58b4cf53ca5be54d8ea0d609a53133b, type: 3}
-  m_Name: 3
+  m_Name: Lose
   m_EditorClassIdentifier: 
   sentences:
-  - text: When she arrived at her apartment, Maya quickly freshened up and lay down
-      on her bed. However, just a few minutes after she closed her eyes, she felt
-      something strange.
+  - text: However, on a different morning, Maya woke up sleep-deprived after being
+      haunted by the ghosts the night before. She still went to work, but her performance
+      was dreadful.
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  - text: A cold breeze seemed to seep into the room, even though the windows were
-      tightly shut. Maya tried to ignore it, pulling her blanket closer.
+  - text: "The presentation she had prepared fell apart because she couldn\u2019t
+      focus. Her boss was disappointed and decided to terminate her employment."
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
-  background: {fileID: 21300000, guid: e4cf9e3e3e774f7499101a2b61318268, type: 3}
-  nextScene: {fileID: 11400000, guid: 1bed337ac12b1e945abf8b09ec3d0729, type: 2}
+  background: {fileID: 21300000, guid: 91ea5227526e95c4ebb2ef5d074f9c06, type: 3}
+  nextScene: {fileID: 0}
