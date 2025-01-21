@@ -19,8 +19,6 @@ public class RandomSpawn : MonoBehaviour
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track spawned enemies
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
 
-    
-    public GameObject exploxion; // explotion effect
 
     void Start()
     {
