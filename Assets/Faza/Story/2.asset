@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2
   m_EditorClassIdentifier: 
   sentences:
-  - text: 'Maya finally left the office at 11 p.m. With weary steps, she walked toward
+  - text: 'Maya finally left the office at 10 p.m. With weary steps, she walked toward
       her apartment at the end of a quiet street. The overwhelming drowsiness clouded
       her mind. Maya wanted only one thing: to sleep.'
     speaker: {fileID: 11400000, guid: bd8ebf3a242884642bf5043639264f61, type: 2}
