@@ -22,7 +22,7 @@ public class RandomSpawn : MonoBehaviour
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track spawned enemies
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
 
-    public GameObject waveUI;
+    public GameObject[] waveUI;
     public GameObject exploxion; // explotion effect
 
     void Start()
@@ -42,9 +42,9 @@ public class RandomSpawn : MonoBehaviour
             Debug.Log($"Starting Wave {currentWave}");
 
             // Start spawning enemies for the current wave
-            waveUI.SetActive(true);
+            waveUI[currentWave-1].SetActive(true);
             yield return new WaitForSeconds(2f);
-            waveUI.SetActive(false);
+            waveUI[currentWave-1] .SetActive(false);
             spawningCoroutine = StartCoroutine(SpawnEnemiesForWave(currentWave));
             yield return StartCoroutine(StartWaveTimer(waveDuration));
 
@@ -58,7 +58,10 @@ public class RandomSpawn : MonoBehaviour
         }
 
         if (currentWave > 4)
-        {
+        {   
+            waveUI[currentWave-1].SetActive(true);
+            yield return new WaitForSeconds(2f);
+            waveUI[currentWave-1] .SetActive(false);
             WinGame();
         }
     }
