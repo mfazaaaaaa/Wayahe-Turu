@@ -12,6 +12,8 @@ public class BottomBarController : MonoBehaviour
     private StoryScene currentScene;
     private State state = State.COMPLETED;
 
+    private bool skipTyping = false; // Flag untuk skip typing
+
     private enum State
     {
         PLAYING, COMPLETED
@@ -27,10 +29,14 @@ public class BottomBarController : MonoBehaviour
     public void PlayNextSentence()
     {
         if (state != State.COMPLETED) return;
-        StartCoroutine(TypeText(currentScene.sentences[++sentenceIndex].text));
+
+        sentenceIndex++;
+        if (sentenceIndex >= currentScene.sentences.Count) return;
+
+        // Tampilkan kalimat baru
         personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
         personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
-        if (sentenceIndex >= currentScene.sentences.Count) return;
+        StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
     }
 
     public bool IsCompleted()
@@ -47,24 +53,28 @@ public class BottomBarController : MonoBehaviour
     {
         barText.text = "";
         state = State.PLAYING;
-        int wordIndex = 0;
+        skipTyping = false; // Reset flag skip
 
-        while (state != State.COMPLETED)
+        for (int i = 0; i < text.Length; i++)
         {
-            barText.text += text[wordIndex];
-            yield return new WaitForSeconds(0.03f);
-            if (++wordIndex == text.Length)
+            if (skipTyping) // Jika skip, langsung tampilkan seluruh teks
             {
-                state = State.COMPLETED ; 
+                barText.text = text;
                 break;
             }
+
+            barText.text += text[i];
+            yield return new WaitForSeconds(0.05f);
         }
 
+        state = State.COMPLETED;
+    }
+
+    public void SkipOrCompleteText()
+    {
         if (state == State.PLAYING)
         {
-            barText.text = text;
-            state = State.COMPLETED;
-            yield break;
+            skipTyping = true; // Aktifkan skip
         }
     }
 }

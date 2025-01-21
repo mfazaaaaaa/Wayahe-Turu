@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public StoryScene currentScene;
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
+
     void Start()
     {
         bottomBar.PlayScene(currentScene);
@@ -26,7 +27,14 @@ public class GameController : MonoBehaviour
                     bottomBar.PlayScene(currentScene);
                     backgroundController.SwitchImage(currentScene.background);
                 }
-                bottomBar.PlayNextSentence();
+                else
+                {
+                    bottomBar.PlayNextSentence();
+                }
+            }
+            else
+            {
+                bottomBar.SkipOrCompleteText(); // Skip animasi teks
             }
         }
     }
