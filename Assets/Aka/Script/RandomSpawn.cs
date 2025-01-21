@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RandomSpawn : MonoBehaviour
 {
@@ -162,12 +163,13 @@ public class RandomSpawn : MonoBehaviour
         gameActive = false;
         ClearEnemies();
         Debug.Log("You win! All waves completed.");
+        SceneManager.LoadScene("Win");
     }
 
     private void LoseGame()
     {
         gameActive = false;
         Debug.Log("You lose! Too many ghosts spawned.");
-        Time.timeScale = 0;
+        SceneManager.LoadScene("Lose");
     }
 }
