@@ -321,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a257b1beeadddb143bc78da43bda9107, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b1a50b0ad9e5ac449a98ac6e1796b1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -442,6 +442,8 @@ MonoBehaviour:
   bottomBar: {fileID: 1780999404}
   backgroundController: {fileID: 1353562588}
   storyScene4: {fileID: 0}
+  winScene: {fileID: 11400000, guid: 4ee90b818f234d3468b151a9b80f4f62, type: 2}
+  loseScene: {fileID: 0}
 --- !u!114 &751346496
 MonoBehaviour:
   m_ObjectHideFlags: 0
