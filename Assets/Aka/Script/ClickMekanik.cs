@@ -5,7 +5,8 @@ public class ClickMekanik : MonoBehaviour
     public int clickThreshold = 3; // Jumlah klik yang dibutuhkan untuk menghilangkan objek
     private int currentClickCount = 0; // Hitung jumlah klik yang sudah terjadi
     public GameObject exploxion; // explotion effect
-    public GameObject sfxDie;
+    public GameObject sfxDie; //audio die
+    public GameObject sfxhit; // sfx hit
 
     private RandomSpawn randomSpawn; // Reference ke RandomSpawn
 
@@ -17,6 +18,7 @@ public class ClickMekanik : MonoBehaviour
 
     void OnMouseDown()
     {
+        GameObject hit = Instantiate(sfxhit, transform.position, Quaternion.identity);
         currentClickCount++; // Menambah jumlah klik
 
         if (currentClickCount >= clickThreshold)
