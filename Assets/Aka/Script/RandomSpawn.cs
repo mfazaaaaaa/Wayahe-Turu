@@ -1,7 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
 
 public class RandomSpawn : MonoBehaviour
 {
@@ -54,10 +54,7 @@ public class RandomSpawn : MonoBehaviour
             // Stop spawning and clear active enemies
             ClearEnemies();
 
-            
-            
             currentWave++;
-            
         }
 
         if (currentWave > 4)
@@ -79,22 +76,30 @@ public class RandomSpawn : MonoBehaviour
 
         timerText.text = "Time: 0.0 s"; // Ensure timer shows 0 at the end
     }
+
     private IEnumerator SpawnEnemiesForWave(int wave)
     {
         while (true) // Continuously spawn enemies
-        {   
+        {
             int prefabIndex = GetPrefabIndexForWave(wave);
-            if (wave<=3){
-                randomGhost = Random.Range(0,wave);
-            }else{
-                randomGhost = Random.Range(0,3);
+            if (wave <= 3)
+            {
+                randomGhost = Random.Range(0, wave);
+            }
+            else
+            {
+                randomGhost = Random.Range(0, 3);
             }
             int spawnCount = (wave == 4) ? 2 : 1; // Spawn 3 enemies at a time in wave 4, otherwise 1
 
             for (int i = 0; i < spawnCount; i++)
             {
                 Vector3 spawnPosition = GetRandomSpawnPosition();
-                GameObject enemy = Instantiate(prefabs[randomGhost], spawnPosition, Quaternion.identity);
+                GameObject enemy = Instantiate(
+                    prefabs[randomGhost],
+                    spawnPosition,
+                    Quaternion.identity
+                );
                 activeEnemies.Add(enemy);
                 ghostCount++;
             }
@@ -118,20 +123,19 @@ public class RandomSpawn : MonoBehaviour
     }
 
     private void ClearEnemies()
-{
-    foreach (GameObject enemy in activeEnemies)
     {
-        if (enemy != null)
+        foreach (GameObject enemy in activeEnemies)
         {
-            // Destroy the enemy
-            Destroy(enemy);
+            if (enemy != null)
+            {
+                // Destroy the enemy
+                Destroy(enemy);
+            }
         }
+        activeEnemies.Clear();
+        Debug.Log("Enemies cleared.");
+        ghostCount = 0;
     }
-    activeEnemies.Clear();
-    Debug.Log("Enemies cleared.");
-    ghostCount = 0;
-}
-
 
     private void CheckLoseCondition()
     {
