@@ -462,8 +462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 241, y: -149}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 334.47003, y: -149}
+  m_SizeDelta: {x: 386.93, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &939400924
 CanvasRenderer:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -637,6 +637,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268693987}
   m_CullTransparentMesh: 1
+--- !u!1 &1332578584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332578586}
+  - component: {fileID: 1332578585}
+  m_Layer: 0
+  m_Name: SpawnAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1332578585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332578584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ebf5db3a50c8644971df38a079106b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab1: {fileID: 3681048863744910037, guid: 8515315f28b625343a1be1a5776ea87d, type: 3}
+  Prefab2: {fileID: 6776740952339423930, guid: 81fb451d098f4034d9302ee65bb3ba63, type: 3}
+  Prefab3: {fileID: 1225556968338760801, guid: b63189758c67e25488819cb4e1d4bce2, type: 3}
+--- !u!4 &1332578586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332578584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.4413137, y: 3.4904556, z: 249.74692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503375340
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +907,7 @@ MonoBehaviour:
   - {fileID: 3243523323097768670, guid: 2087521cad912db4893ba57da51b6775, type: 3}
   spawnMin: {x: -7, y: -3, z: 0}
   spawnMax: {x: 7, y: 3, z: 0}
-  waveDuration: 20
+  waveDuration: 60
   maxGhostCount: 10
   spawnInterval: 2
   timerText: {fileID: 939400925}
@@ -1168,3 +1215,4 @@ SceneRoots:
   - {fileID: 1892775660}
   - {fileID: 1842281406}
   - {fileID: 2048088310}
+  - {fileID: 1332578586}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7325159731891336758}
   - component: {fileID: -9077946788852635054}
   - component: {fileID: 2514228035865645357}
-  - component: {fileID: -5613035242732720349}
+  - component: {fileID: 350090593404564796}
   m_Layer: 0
   m_Name: 3_0
   m_TagString: Untagged
@@ -116,7 +116,6 @@ MonoBehaviour:
   clickThreshold: 3
   exploxion: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
   sfxDie: {fileID: 7255703099536327640, guid: 872ef4af0693ef845b59b29ca0082f0c, type: 3}
-  sfxhit: {fileID: 2111121427580119871, guid: 9b8016a215eca3243acebab8d7070d7b, type: 3}
 --- !u!61 &2514228035865645357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -162,7 +161,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.56, y: 8.63}
   m_EdgeRadius: 0
---- !u!50 &-5613035242732720349
+--- !u!50 &350090593404564796
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

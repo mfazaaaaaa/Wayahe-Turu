@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
                     // Jika berada di scene 4 dan percakapan selesai, pindah ke scene Gameplay
                     if (currentScene == storyScene4)
                     {
-                        SceneManager.LoadScene("Gameplay");  // Gantilah dengan nama scene gameplay Anda
+                        SceneManager.LoadScene("Ingame");  // Gantilah dengan nama scene gameplay Anda
                         return;
                     }
 
