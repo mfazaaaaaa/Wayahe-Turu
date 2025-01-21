@@ -20,6 +20,8 @@ public class RandomSpawn : MonoBehaviour
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track spawned enemies
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
 
+    public GameObject exploxion; // explotion effect
+
     void Start()
     {
         StartCoroutine(WaveManager());
@@ -96,18 +98,20 @@ public class RandomSpawn : MonoBehaviour
     }
 
     private void ClearEnemies()
+{
+    foreach (GameObject enemy in activeEnemies)
     {
-        foreach (GameObject enemy in activeEnemies)
+        if (enemy != null)
         {
-            if (enemy != null)
-            {
-                Destroy(enemy);
-            }
+            // Destroy the enemy
+            Destroy(enemy);
         }
-        activeEnemies.Clear();
-        Debug.Log("Enemies cleared.");
-        ghostCount = 0;
     }
+    activeEnemies.Clear();
+    Debug.Log("Enemies cleared.");
+    ghostCount = 0;
+}
+
 
     private void CheckLoseCondition()
     {
