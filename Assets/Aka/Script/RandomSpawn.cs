@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class RandomSpawn : MonoBehaviour
 {
@@ -14,12 +15,14 @@ public class RandomSpawn : MonoBehaviour
 
     private int currentWave = 1; // Current wave number
     private int ghostCount = 0; // Number of ghosts currently spawned
+    private int randomGhost;
+    public TextMeshProUGUI timerText;
     private bool gameActive = true;
 
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track spawned enemies
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
 
-    
+    public GameObject waveUI;
     public GameObject exploxion; // explotion effect
 
     void Start()
@@ -39,16 +42,22 @@ public class RandomSpawn : MonoBehaviour
             Debug.Log($"Starting Wave {currentWave}");
 
             // Start spawning enemies for the current wave
+            waveUI.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            waveUI.SetActive(false);
             spawningCoroutine = StartCoroutine(SpawnEnemiesForWave(currentWave));
+            yield return StartCoroutine(StartWaveTimer(waveDuration));
 
             // Wait for the wave duration to finish
-            yield return new WaitForSeconds(waveDuration);
+            StopCoroutine(spawningCoroutine);
 
             // Stop spawning and clear active enemies
-            StopCoroutine(spawningCoroutine);
             ClearEnemies();
 
+            
+            
             currentWave++;
+            
         }
 
         if (currentWave > 4)
@@ -57,17 +66,35 @@ public class RandomSpawn : MonoBehaviour
         }
     }
 
+    private IEnumerator StartWaveTimer(float duration)
+    {
+        float remainingTime = duration;
+
+        while (remainingTime > 0)
+        {
+            timerText.text = $"Time: {remainingTime:F1} s"; // Update TMP text with remaining time
+            yield return new WaitForSeconds(0.1f); // Update every 0.1 seconds for smooth display
+            remainingTime -= 0.1f;
+        }
+
+        timerText.text = "Time: 0.0 s"; // Ensure timer shows 0 at the end
+    }
     private IEnumerator SpawnEnemiesForWave(int wave)
     {
         while (true) // Continuously spawn enemies
-        {
+        {   
             int prefabIndex = GetPrefabIndexForWave(wave);
-            int spawnCount = (wave == 4) ? 3 : 1; // Spawn 3 enemies at a time in wave 4, otherwise 1
+            if (wave<=3){
+                randomGhost = Random.Range(0,wave);
+            }else{
+                randomGhost = Random.Range(0,3);
+            }
+            int spawnCount = (wave == 4) ? 2 : 1; // Spawn 3 enemies at a time in wave 4, otherwise 1
 
             for (int i = 0; i < spawnCount; i++)
             {
                 Vector3 spawnPosition = GetRandomSpawnPosition();
-                GameObject enemy = Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+                GameObject enemy = Instantiate(prefabs[randomGhost], spawnPosition, Quaternion.identity);
                 activeEnemies.Add(enemy);
                 ghostCount++;
             }
