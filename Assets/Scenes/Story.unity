@@ -191,7 +191,7 @@ Canvas:
   m_GameObject: {fileID: 166713889}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   currentScene: {fileID: 11400000, guid: 51428b18be2384b4ab972211c0d46bae, type: 2}
   bottomBar: {fileID: 1549959142}
   backgroundController: {fileID: 1404678802}
+  storyScene4: {fileID: 11400000, guid: 1bed337ac12b1e945abf8b09ec3d0729, type: 2}
 --- !u!1 &689757262
 GameObject:
   m_ObjectHideFlags: 0
