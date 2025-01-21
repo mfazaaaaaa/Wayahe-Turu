@@ -116,7 +116,6 @@ MonoBehaviour:
   clickThreshold: 3
   exploxion: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
   sfxDie: {fileID: 1766856009958387094, guid: a00d6d53c07befd478dd545f9c3ccc7d, type: 3}
-  sfxhit: {fileID: 2111121427580119871, guid: 9b8016a215eca3243acebab8d7070d7b, type: 3}
 --- !u!61 &-5213395997095088001
 BoxCollider2D:
   m_ObjectHideFlags: 0
