@@ -60,7 +60,7 @@ public class RandomSpawn : MonoBehaviour
         while (true) // Continuously spawn enemies
         {
             int prefabIndex = GetPrefabIndexForWave(_wave);
-            int spawnCount = (_wave == 4) ? 3 : 1; // Spawn 3 enemies at a time in _wave 4, otherwise 1
+            int spawnCount = (_wave == 4) ? 2 : 1; // Spawn 3 enemies at a time in _wave 4, otherwise 1
 
             for (int i = 0; i < spawnCount; i++)
             {

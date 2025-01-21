@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1020445320249023197}
   - component: {fileID: -7085029360655123940}
   - component: {fileID: 3392593041627019582}
+  - component: {fileID: 8038726438864227622}
   m_Layer: 5
   m_Name: pocong
   m_TagString: Untagged
@@ -111,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083bb04d390eeea4eae5f9367e297fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickThreshold: 3
 --- !u!61 &3392593041627019582
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,3 +158,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8038726438864227622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489894453144460569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6dd2227269a0e74d8242b82c628467b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
