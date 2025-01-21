@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     public StoryScene storyScene4;
+    public StoryScene winScene;
+    public StoryScene loseScene;
 
     void Start()
     {
@@ -24,15 +26,28 @@ public class GameController : MonoBehaviour
             {
                 if (bottomBar.IsLastSentence())
                 {
-                    if (currentScene.nextScene == null)
+                    // Jika berada di scene 4 dan percakapan selesai, pindah ke scene Gameplay
+                    if (currentScene == storyScene4)
                     {
-                        // Pindah ke scene Gameplay jika berada di akhir StoryScene 4
-                        if (currentScene == storyScene4)  // Pastikan storyScene4 adalah referensi ke scene terakhir (scene 4)
-                        {
-                            SceneManager.LoadScene("Gameplay");  // Gantilah dengan nama scene gameplay Anda
-                        }
+                        SceneManager.LoadScene("Gameplay");  // Gantilah dengan nama scene gameplay Anda
                         return;
                     }
+
+                    // Jika berada di scene Win dan percakapan selesai, pindah ke MainMenu
+                    if (currentScene == winScene)
+                    {
+                        SceneManager.LoadScene("MainMenu");  // Pindah ke scene MainMenu
+                        return;
+                    }
+
+                    // Jika berada di scene Lose dan percakapan selesai, pindah ke MainMenu
+                    if (currentScene == loseScene)
+                    {
+                        SceneManager.LoadScene("MainMenu");  // Pindah ke scene MainMenu
+                        return;
+                    }
+
+                    if (currentScene.nextScene == null) return;
 
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
