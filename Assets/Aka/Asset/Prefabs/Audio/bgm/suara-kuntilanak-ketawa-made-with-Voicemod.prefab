@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1410498121991626462}
   - component: {fileID: 2073175903017675946}
+  - component: {fileID: -9168066023753756170}
   m_Layer: 0
   m_Name: suara-kuntilanak-ketawa-made-with-Voicemod
   m_TagString: Untagged
@@ -128,3 +129,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-9168066023753756170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225556968338760801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad131aee698753846b2484b424e2fc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 15
