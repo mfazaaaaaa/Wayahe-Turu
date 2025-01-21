@@ -20,6 +20,7 @@ public class RandomSpawn : MonoBehaviour
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
 
     
+    public GameObject exploxion; // explotion effect
 
     void Start()
     {
