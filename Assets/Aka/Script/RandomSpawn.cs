@@ -15,6 +15,7 @@ public class RandomSpawn : MonoBehaviour
     private int currentWave = 1; // Current wave number
     private int ghostCount = 0; // Number of ghosts currently spawned
     private bool gameActive = true;
+    private int randomGhost;
 
     private List<GameObject> activeEnemies = new List<GameObject>(); // List to track spawned enemies
     private Coroutine spawningCoroutine; // Reference to the spawning Coroutine
@@ -54,17 +55,23 @@ public class RandomSpawn : MonoBehaviour
         }
     }
 
-    private IEnumerator SpawnEnemiesForWave(int wave)
+    private IEnumerator SpawnEnemiesForWave(int _wave)
     {
         while (true) // Continuously spawn enemies
         {
-            int prefabIndex = GetPrefabIndexForWave(wave);
-            int spawnCount = (wave == 4) ? 3 : 1; // Spawn 3 enemies at a time in wave 4, otherwise 1
+            int prefabIndex = GetPrefabIndexForWave(_wave);
+            int spawnCount = (_wave == 4) ? 3 : 1; // Spawn 3 enemies at a time in _wave 4, otherwise 1
 
             for (int i = 0; i < spawnCount; i++)
             {
                 Vector3 spawnPosition = GetRandomSpawnPosition();
-                GameObject enemy = Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+                if(_wave<3){
+                randomGhost = Random.Range(0,_wave);
+                }
+                else{
+                    randomGhost = Random.Range(0,3);
+                }
+                GameObject enemy = Instantiate(prefabs[randomGhost], spawnPosition, Quaternion.identity);
                 activeEnemies.Add(enemy);
                 ghostCount++;
             }
@@ -73,10 +80,11 @@ public class RandomSpawn : MonoBehaviour
         }
     }
 
-    private int GetPrefabIndexForWave(int wave)
-    {
+    private int GetPrefabIndexForWave(int _wave)
+    {   
+        
         // Each wave uses a specific prefab index
-        return Mathf.Clamp(wave - 1, 0, prefabs.Length - 1);
+        return Mathf.Clamp(_wave - 1, 0, prefabs.Length - 1);
     }
 
     private Vector3 GetRandomSpawnPosition()
