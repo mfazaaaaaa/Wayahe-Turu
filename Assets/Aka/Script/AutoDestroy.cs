@@ -15,6 +15,8 @@ public class AutoDestroy : MonoBehaviour
 
     public void DestroyDelay()
     {
-        Destroy(gameObject, destroyTime);
+        var game = gameObject;
+        if (game != null)
+            Destroy(gameObject, destroyTime);
     }
 }
