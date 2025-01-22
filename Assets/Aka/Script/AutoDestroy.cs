@@ -12,4 +12,9 @@ public class AutoDestroy : MonoBehaviour
         // Hancurkan game object ini setelah waktu yang ditentukan
         Destroy(gameObject, destroyTime);
     }
+
+    public void DestroyDelay()
+    {
+        Destroy(gameObject, destroyTime);
+    }
 }
