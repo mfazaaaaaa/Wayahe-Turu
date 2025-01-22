@@ -20,9 +20,9 @@ public class AutoDestroy : MonoBehaviour
         //Halo dek sini sama mas
         Destroy(gameObject, destroyTime);
 
-
         if (game == null)
-        {
+        {	
+        // ini hari rabu besok kamis jumat berkah 
             Debug.Log("game is null");
         }
         else
