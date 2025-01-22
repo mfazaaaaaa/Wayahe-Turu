@@ -321,7 +321,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b1a50b0ad9e5ac449a98ac6e1796b1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5fd2f1716af76ce40af8591ffd357565, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad3cbab917e1794c888b6639844553d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: {fileID: 11400000, guid: 4ee90b818f234d3468b151a9b80f4f62, type: 2}
+  currentScene: {fileID: 11400000, guid: 9d2bbc1e7dd58fc49add2458a02e493c, type: 2}
   bottomBar: {fileID: 1780999404}
   backgroundController: {fileID: 1353562588}
   storyScene4: {fileID: 0}
@@ -1018,7 +1018,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7aa129e95cbdb204dabc2fd38e6e0cf3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7e11642c1c84304448aa2a692149bcee, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
