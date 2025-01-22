@@ -60,9 +60,9 @@ public class RandomSpawn : MonoBehaviour
 
         if (currentWave > 4)
         {   
-            waveUI[currentWave-1].SetActive(true);
+            // waveUI[currentWave-1].SetActive(true);
             yield return new WaitForSeconds(2f);
-            waveUI[currentWave-1] .SetActive(false);
+            // waveUI[currentWave-1] .SetActive(false);
             WinGame();
         }
     }
@@ -128,11 +128,12 @@ public class RandomSpawn : MonoBehaviour
 
     private void ClearEnemies()
     {
-        foreach (GameObject enemy in activeEnemies)
+        for (GameObject enemy in activeEnemies)
         {
             if (enemy != null)
             {
                 // Destroy the enemy
+                GameObject spawnedObject = Instantiate(exploxion, enemy.transform.position, Quaternion.identity);
                 Destroy(enemy);
             }
         }
