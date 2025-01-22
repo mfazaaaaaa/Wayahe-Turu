@@ -128,7 +128,7 @@ public class RandomSpawn : MonoBehaviour
 
     private void ClearEnemies()
     {
-        for (GameObject enemy in activeEnemies)
+        foreach (GameObject enemy in activeEnemies)
         {
             if (enemy != null)
             {
