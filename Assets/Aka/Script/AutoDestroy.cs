@@ -19,4 +19,9 @@ public class AutoDestroy : MonoBehaviour
         if (game != null)
             Destroy(gameObject, destroyTime);
     }
+
+    public void DestroyMagelang()
+    {
+        Destroy(gameObject, destroyTime);
+    }
 }
