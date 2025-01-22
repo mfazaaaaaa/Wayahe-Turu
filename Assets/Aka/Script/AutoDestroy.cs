@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AutoDestroy : MonoBehaviour
 {
+
+    // halo saya jawatengah
     [Tooltip("Waktu dalam detik sebelum objek dihancurkan")]
     public float destroyTime = 5f; // Nilai default 5 detik
 
