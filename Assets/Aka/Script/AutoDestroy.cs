@@ -17,7 +17,9 @@ public class AutoDestroy : MonoBehaviour
     {
         var game = gameObject;
         if (game != null)
-            Destroy(gameObject, destroyTime);
+        //Halo dek sini sama mas
+        Destroy(gameObject, destroyTime);
+
     }
 
     public void DestroyMagelang()
