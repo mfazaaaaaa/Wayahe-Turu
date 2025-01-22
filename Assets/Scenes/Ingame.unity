@@ -1380,7 +1380,7 @@ MonoBehaviour:
   spawnMin: {x: -7, y: -3, z: 0}
   spawnMax: {x: 7, y: 3, z: 0}
   waveDuration: 20
-  maxGhostCount: 1
+  maxGhostCount: 10
   spawnInterval: 1.5
   timerText: {fileID: 939400925}
   waveUI:
