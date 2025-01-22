@@ -16,6 +16,7 @@ public class AutoDestroy : MonoBehaviour
     public void DestroyDelay()
     {
         Destroy(gameObject, destroyTime);
+        //Halo dek sini sama mas
     }
 
     public void DestroyMagelang()
