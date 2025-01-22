@@ -20,6 +20,8 @@ public class AutoDestroy : MonoBehaviour
         //Halo dek sini sama mas
         Destroy(gameObject, destroyTime);
 
+        // ini hari rabu besok kamis jumat berkah 
+
     }
 
     public void DestroyMagelang()
