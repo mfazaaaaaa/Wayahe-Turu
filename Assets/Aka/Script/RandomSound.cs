@@ -37,10 +37,18 @@ public class RandomSound : MonoBehaviour
         }
     }
 
-    // Fungsi untuk spawn prefab                                           
+    // Fungsi untuk spawn prefab
     public void spawnSounds()
     {
         int prefabIndex = UnityEngine.Random.Range(0, prefabList.Count); // Pilih prefab acak
-        Instantiate(prefabList[prefabIndex], transform.position, Quaternion.identity); // Spawn prefab di posisi objek ini
+        GameObject spawnedPrefab = Instantiate(prefabList[prefabIndex], transform.position, Quaternion.identity); // Spawn prefab di posisi objek ini
+        StartCoroutine(DestroyAfterDelay(spawnedPrefab, 15f)); // Mulai coroutine untuk menghancurkan prefab
+    }
+
+    // Coroutine untuk menghancurkan prefab setelah delay tertentu
+    IEnumerator DestroyAfterDelay(GameObject obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(obj);
     }
 }
