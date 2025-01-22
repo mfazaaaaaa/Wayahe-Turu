@@ -20,6 +20,15 @@ public class AutoDestroy : MonoBehaviour
         //Halo dek sini sama mas
         Destroy(gameObject, destroyTime);
 
+
+        if (game == null)
+        {
+            Debug.Log("game is null");
+        }
+        else
+        {
+            Debug.Log("game is present");
+        }
     }
 
     public void DestroyMagelang()
