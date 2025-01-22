@@ -17,4 +17,9 @@ public class AutoDestroy : MonoBehaviour
     {
         Destroy(gameObject, destroyTime);
     }
+
+    public void DestroyMagelang()
+    {
+        Destroy(gameObject, destroyTime);
+    }
 }
